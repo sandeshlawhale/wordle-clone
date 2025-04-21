@@ -15,8 +15,8 @@ export default function Modal({
           <button
             className="btn"
             onClick={() => {
-              resetGame();
               setShowModal(false);
+              resetGame();
             }}
           >
             Play Again
@@ -31,8 +31,8 @@ export default function Modal({
           <button
             className="btn"
             onClick={() => {
-              resetGame();
               setShowModal(false);
+              resetGame();
             }}
           >
             Play Again
