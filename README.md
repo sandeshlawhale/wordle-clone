@@ -28,12 +28,6 @@ I,ve made some improvements from the original tutorial like,
   3. Other Pages
   4. and more..
 
-It has some flaws also,
-  1. It's not all responsive.
-  2. Layout is bit off.
-  3. Colors and Typography.
-
-I'll do it in future when i get time fom other projects and all. 
 
 Through the journey I've learned a lot. what i learned so far is in front of you try it and share me your response. I'll be happy.
 
