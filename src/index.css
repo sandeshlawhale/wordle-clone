@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,300&family=Uchen&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,300&family=Uchen&display=swap");
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-body{
+body {
   height: 100vh;
   width: 100%;
   background: hsl(240, 3%, 7%);
   color: #fff;
-  font-size: clamp(.5em, 2.5vmin, 1.5em);
-  font-family: 'Poppins', sans-serif;
-  
+  font-size: clamp(0.5em, 2.5vmin, 1.5em);
+  font-family: "Poppins", sans-serif;
 }
 
 /* header style  */
@@ -24,36 +23,36 @@ header {
   border-bottom: 1px solid #333;
   box-shadow: 3px 0 5px rgba(255, 255, 255, 0.3);
 }
-header > h1{
+header > h1 {
   font-weight: 400;
 }
 
 /* wordle grid */
-.wordle{
+.wordle {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 92vh;
 }
-.grid{
+.grid {
   margin: 1rem 0;
   width: fit-content;
   flex-grow: 1;
 }
-.row{
+.row {
   display: grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(5, 4em);
   grid-auto-rows: 4em;
-  gap: .25em;
-  margin-top: .25em;
+  gap: 0.25em;
+  margin-top: 0.25em;
 }
-.row > div{
+.row > div {
   color: #fff;
   font-size: 2em;
-  border: .05em solid hsl(240, 2%, 23%);
+  border: 0.05em solid hsl(240, 2%, 23%);
   background-color: hsl(240, 3%, 7%);
   height: 100%;
   width: 100%;
@@ -66,68 +65,68 @@ header > h1{
 }
 
 /* tiles color */
-.row > div.green{
+.row > div.green {
   --background-color: hsl(115, 29%, 43%);
-  animation: flip .5s ease forwards;
+  animation: flip 0.5s ease forwards;
 }
-.row > div.yellow{
+.row > div.yellow {
   --background-color: hsl(49, 51%, 47%);
-  animation: flip .5s ease forwards;
+  animation: flip 0.5s ease forwards;
 }
-.row > div.grey{
+.row > div.grey {
   --background-color: hsl(240, 2%, 23%);
-  animation: flip .5s ease forwards;
+  animation: flip 0.5s ease forwards;
 }
 
 /* animation delay */
-.row > div:nth-child(2){
-  animation-delay: .2s;
+.row > div:nth-child(2) {
+  animation-delay: 0.2s;
 }
-.row > div:nth-child(3){
-  animation-delay: .4s;
+.row > div:nth-child(3) {
+  animation-delay: 0.4s;
 }
-.row > div:nth-child(4){
-  animation-delay: .6s;
+.row > div:nth-child(4) {
+  animation-delay: 0.6s;
 }
-.row > div:nth-child(5){
-  animation-delay: .8s;
+.row > div:nth-child(5) {
+  animation-delay: 0.8s;
 }
 
-.row > div.filled{
+.row > div.filled {
   border-color: hsl(200, 1%, 54%);
-  animation: grow .25s ease-in-out forwards;
+  animation: grow 0.25s ease-in-out forwards;
 }
 
 /* animation */
 @keyframes grow {
-  0%{
+  0% {
     transform: scale(1);
   }
-  50%{
+  50% {
     transform: scale(1.05);
   }
-  100%{
+  100% {
     transform: scale(1);
   }
 }
 
 @keyframes flip {
-  0%{
+  0% {
     transform: rotateX(0);
-    border: .05em solid hsl(240, 2%, 23%);
+    border: 0.05em solid hsl(240, 2%, 23%);
     background-color: hsl(240, 3%, 7%);
   }
-  45%{
+  45% {
     transform: rotateX(90deg);
-    border: .05em solid hsl(240, 2%, 23%);
+    border: 0.05em solid hsl(240, 2%, 23%);
     background-color: hsl(240, 3%, 7%);
   }
-  55%{
+  55% {
     transform: rotateX(90deg);
     background-color: var(--background-color);
     border: none;
   }
-  100%{
+  100% {
     transform: rotateX(0);
     background-color: var(--background-color);
     border: none;
@@ -135,15 +134,15 @@ header > h1{
 }
 
 /* keyboard style */
-.keypad{
+.keypad {
   margin: 0;
   margin-bottom: 1rem;
   display: grid;
   grid-template-columns: repeat(20, minmax(auto, 1em));
   grid-auto-rows: 2.75em;
-  gap: .25em;
+  gap: 0.25em;
 }
-.keypad > div{
+.keypad > div {
   grid-column: span 2;
   background-color: hsl(
     var(--hue, 200),
@@ -160,40 +159,41 @@ header > h1{
   user-select: none;
   cursor: pointer;
 }
-.keypad > div:nth-child(11){
+.keypad > div:nth-child(11) {
   grid-column-start: 2;
   grid-column-end: 4;
 }
-.keypad > div:nth-child(20){
+.keypad > div:nth-child(20) {
   grid-column: span 3;
 }
-.keypad > div:last-child{
+.keypad > div:last-child {
   grid-column: span 3;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
-.key > svg{
+.key > svg {
   height: 1.2em;
   width: 1.2em;
 }
-.keypad > div:hover, .keypad > div:focus{
+.keypad > div:hover,
+.keypad > div:focus {
   --lightness-offset: 10%;
 }
-.keypad > div.green{
+.keypad > div.green {
   --hue: 115;
   --saturation: 29%;
   --lightness: 43%;
 }
-.keypad > div.yellow{
+.keypad > div.yellow {
   --hue: 49;
   --saturation: 51%;
   --lightness: 47%;
 }
-.keypad > div.grey{
-  --lightness: 23%; 
+.keypad > div.grey {
+  --lightness: 23%;
 }
 
 /* modal */
-.modal{
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -202,7 +202,7 @@ header > h1{
   width: 100%;
   height: 100%;
 }
-.modal > div{
+.modal > div {
   width: 30%;
   padding: 2%;
   margin: 10% auto;
@@ -216,7 +216,19 @@ header > h1{
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
 }
-.modal .solution{
+.modal > div > button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: hsl(240, 3%, 7%);
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.modal .solution {
   text-transform: uppercase;
   font-size: 1.5em;
   color: hsl(115, 29%, 43%);
@@ -225,19 +237,19 @@ header > h1{
 }
 
 /* sidebar */
-.sidebar{
+.sidebar {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 1;
 }
-.sidebar .bar-icon{
+.sidebar .bar-icon {
   height: 8vh;
   width: 32px;
   margin-right: 15px;
   fill: white;
 }
-.side-container{
+.side-container {
   position: fixed;
   width: 280px;
   height: 100vh;
@@ -248,12 +260,12 @@ header > h1{
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(15px);
 }
-.cross-icon-container{
+.cross-icon-container {
   height: 8vh;
   width: 100%;
   position: relative;
 }
-.cross-icon-container .cross-icon{
+.cross-icon-container .cross-icon {
   position: absolute;
   top: 0;
   right: 0;
@@ -262,7 +274,7 @@ header > h1{
   margin-right: 15px;
   fill: white;
 }
-.side-wrapper{
+.side-wrapper {
   position: relative;
   height: 92vh;
   width: 100%;
@@ -270,18 +282,18 @@ header > h1{
   display: flex;
   flex-direction: column;
 }
-.side-wrapper .side-content{
+.side-wrapper .side-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.side-wrapper .side-content > h1{
+.side-wrapper .side-content > h1 {
   font-size: 22px;
   font-weight: 400;
   margin-bottom: 30px;
 }
-.side-wrapper .side-content > a{
+.side-wrapper .side-content > a {
   width: 100%;
   text-align: center;
   text-decoration: none;
@@ -292,7 +304,7 @@ header > h1{
   padding-bottom: 10px;
   border-bottom: 1px solid #333;
 }
-.side-profile{
+.side-profile {
   display: flex;
   position: absolute;
   bottom: 0;
@@ -301,55 +313,55 @@ header > h1{
   height: 80px;
   padding: 20px 40px;
 }
-.side-profile .profile-image{
+.side-profile .profile-image {
   width: 40px;
   aspect-ratio: 1/1;
   border-radius: 50%;
 }
-.side-profile .profile-info{
+.side-profile .profile-info {
   display: flex;
   flex-direction: column;
   margin-left: 12px;
   justify-content: center;
 }
-.side-profile .profile-info .profile-name{
+.side-profile .profile-info .profile-name {
   font-size: 12px;
   font-weight: 400;
 }
-.side-profile .profile-info .profile-email{
+.side-profile .profile-info .profile-email {
   font-size: 10px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
 }
 
 /* about page */
-.about-container{
+.about-container {
   width: 58%;
   height: fit-content;
   color: #fff;
   position: relative;
-  margin: 60px auto 60px ;
+  margin: 60px auto 60px;
 }
-.about-container::-webkit-scrollbar{
+.about-container::-webkit-scrollbar {
   display: none;
 }
-.about-container > h1{
+.about-container > h1 {
   font-size: 32px;
   font-weight: 400;
   margin-bottom: 8px;
 }
-.about-container > p{
+.about-container > p {
   font-size: 18px;
   font-weight: 200;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
 }
-.about-container > h5{
+.about-container > h5 {
   font-weight: 300;
 }
 
 /* Contact */
-.contact-container{
+.contact-container {
   width: 900px;
   margin: 60px auto;
   display: grid;
@@ -357,12 +369,12 @@ header > h1{
   gap: 12%;
   align-content: center;
 }
-.contact-options{
+.contact-options {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-.contact-options > article{
+.contact-options > article {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -370,7 +382,7 @@ header > h1{
   border-radius: 1.2rem;
   border: 1px solid #333;
 }
-.contact-options > article > a{
+.contact-options > article > a {
   text-decoration: none;
   color: white;
   cursor: pointer;
@@ -378,49 +390,50 @@ header > h1{
   font-weight: 300;
   display: flex;
   align-items: center;
-  gap: .8rem;
-  transition: all .5s ease;
+  gap: 0.8rem;
+  transition: all 0.5s ease;
 }
-.contact-options > article > a:hover{
+.contact-options > article > a:hover {
   color: rgb(45, 45, 255);
 }
-.contact-option .msg-icon{
+.contact-option .msg-icon {
   fill: #fff;
   width: 2rem;
   height: 2rem;
 }
-.contact-option > h5{
+.contact-option > h5 {
   font-size: 1.2rem;
   font-weight: 400;
 }
-.contact-option > p{
+.contact-option > p {
   font-size: 16px;
   font-weight: 200;
   color: rgba(255, 255, 255, 0.7);
 }
-.contact-option > a{
+.contact-option > a {
   text-decoration: none;
   font-size: 18px;
   font-weight: 300;
 }
-.privacy > h5{
+.privacy > h5 {
   font-size: 20px;
   font-weight: 400;
 }
-.privacy > p{
+.privacy > p {
   font-size: 18px;
   color: rgba(255, 255, 255, 0.7);
   font-weight: 300;
 }
 
 /* form */
-.contact-form > form{
+.contact-form > form {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
-input, textarea{
+input,
+textarea {
   width: 100%;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -431,17 +444,17 @@ input, textarea{
   font-size: 1.2rem;
   font-weight: 300;
 }
-.contact-form > form > button{
+.contact-form > form > button {
   width: fit-content;
   font-size: 1.2rem;
   padding: 12px 20px;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background: transparent;
   color: #fff;
   border: 1px solid #333;
   cursor: pointer;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
-.contact-form > form > button:hover{
+.contact-form > form > button:hover {
   background: rgb(45, 45, 255);
 }
