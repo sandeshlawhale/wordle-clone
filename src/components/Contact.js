@@ -36,11 +36,19 @@ export default function Contact() {
     <div className="contact-container">
       <div className="contact-options">
         <article className="contact-option">
-          <a href="https://github.com/sandeshlawhale" target="_blank">
+          <a
+            href="https://github.com/sandeshlawhale"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaGithub className="git-icon" />
             Github
           </a>
-          <a href="https://www.linkedin.com/in/lawhalesandesh/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/lawhalesandesh/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaLinkedin className="git-icon" />
             LinkedIn
           </a>
